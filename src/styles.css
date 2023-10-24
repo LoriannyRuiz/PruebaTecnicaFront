@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+.nav-link{
+  font-family:'Sometype Mono';
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.active{
+  color: rgb(161, 211, 195);
+}
+.nav-link:hover{
+  color: rgb(161, 211, 195);
+}
+
+.nav-link:focus{
+  color: rgb(161, 211, 195);
+}
+
+.formAdd{
+  background-color: rgb(161, 211, 195);
+  width: 600px;
+  height: auto;
+  padding-top: 10px;
+
+}
+
+.formFact{
+  justify-content: end;
+  width: auto;
+  height: auto;
+  padding-top: 10px;
+}
+
+.mensajeconfirmacion{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Sometype Mono';
+  font-size: 15px;
+  font-weight: bold;
+  color: red;
+}
+
+span{
+  font-size: 17px;
+}
+
+strong{
+  font-size: 20px;
+}

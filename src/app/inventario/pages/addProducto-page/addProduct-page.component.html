@@ -1,0 +1,38 @@
+  <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+
+      <div class="container-fluid  formAdd">
+
+        <h1 style="font-family: Sometype Mono; text-align: center;">AGREGAR PRODUCTO</h1>
+
+        <div class="mb-3">
+          <label for="nombre" class="form-label">NOMBRE:</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre del Producto" formControlName="name">
+        </div>
+        <div class="mb-3">
+          <label for="descripcion" class="form-label">DESCRIPCION:</label>
+          <textarea class="form-control" id="descripcion" rows="3" placeholder="Describe tu Producto" formControlName="description" ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="categoria" class="form-label">CATEGORIA:</label>
+          <input type="text" class="form-control" id="categoria" placeholder="Categoria del producto" formControlName="category" >
+        </div>
+        <div class="mb-3">
+          <label for="stock" class="form-label">STOCK:</label>
+          <input type="number" class="form-control" id="stock" placeholder="Cantidad disponible" formControlName="stock">
+        </div>
+        <div class="mb-3">
+          <label for="precio" class="form-label">PRECIO:</label>
+          <input type="number" class="form-control" id="precio" placeholder="Precio del Producto" formControlName="price">
+        </div>
+        <div *ngIf="mostrarMensaje " class="mensajeconfirmacion">
+            <p>{{mostrarMensaje}}</p>
+        </div>
+
+        <div class="d-grid">
+          <button class="btn btn-secondary" type="submit"  >AGREGAR</button>
+        </div>
+
+
+      </div>
+ </form>
+

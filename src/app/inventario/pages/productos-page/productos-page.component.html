@@ -1,0 +1,60 @@
+
+<h1 class="d-flex align-items-center justify-content-center" style="font-size: 65px; font-family: 'Sometype Mono';"
+>TODOS LOS PRODUCTOS</h1>
+
+<form class="row g-3" style="justify-content:left ;">
+  <div class="col-auto">
+    <input [(ngModel)]="nombre" name="nombre" type="text" class="form-control" placeholder="Buscar por nombre">
+  </div>
+  <div class="col-auto">
+    <button (click)="filtrarProductos()" type="submit" class="btn btn-success mb-3">FILTRAR</button>
+  </div>
+  <div class="col-auto">
+    <input [(ngModel)]="categoria" name="categoria" type="text" class="form-control" placeholder="Buscar por categoria">
+  </div>
+  <div class="col-auto">
+    <button (click)="filtrarCategory()" type="submit" class="btn btn-success mb-3">FILTRAR</button>
+  </div>
+  <div *ngIf="mostrarMensaje " class="mensajeconfirmacion" style="justify-content: center;">
+    <p>{{mostrarMensaje}}</p>
+  </div>
+</form>
+
+<form class="row g-3"  style="justify-content: right;">
+<div class="col-auto">
+  <button (click)="obtenerProductos()" type="submit" class="btn btn-success mb-3">MOSTRAR TODOS</button>
+</div>
+</form>
+
+<table class="table">
+  <thead class="table-success">
+    <tr>
+      <th class="col-4">NOMBRE DEL PRODUCTO</th>
+      <th class="col-4">DESCRIPCION</th>
+      <th class="col-4">CATEGORIA</th>
+      <th class="col-1">FACTURA</th>
+      <th class="col-1">DETALLES</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let producto of  productosFiltrados">
+      <td>{{producto.name}}</td>
+      <td>{{producto.description}}</td>
+      <td>{{producto.category}}</td>
+      <td>
+        <a>
+          <button (click)="goToInvoiceDetail(producto)"  type="button" class="btn btn-success">VER</button>
+        </a>
+      </td>
+      <td>
+        <a >
+          <button (click)="goToInvoiceDetailn(producto)" type="button" class="btn btn-success">VER</button>
+        </a>
+    </td>
+    </tr>
+
+
+  </tbody>
+</table>
+

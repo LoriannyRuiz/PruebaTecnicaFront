@@ -1,0 +1,50 @@
+
+<div *ngIf="producto"  class="container-fluid" style="width: 600px; justify-content: center;">
+  <div class="card">
+    <div class="card-header">
+      <h2 class="card-title">Detalles del producto</h2>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div>
+          <strong>ID:</strong><br>
+          <span>{{ producto.id }}</span>
+        </div>
+        <div >
+          <strong>Nombre:</strong><br>
+          <span>{{ producto.name }}</span>
+        </div>
+        <div >
+          <strong>Categoria:</strong><br>
+          <span>{{ producto.category }}</span>
+        </div>
+        <div >
+          <strong>Descripcion:</strong><br>
+          <span>{{ producto.description }}</span>
+        </div>
+        <div >
+          <strong>Stock: </strong><br>
+          <span>{{ producto.stock }}</span>
+        </div>
+        <div >
+          <strong>Precio:</strong><br>
+          <span>{{ producto.price }}</span>
+        </div>
+        <div *ngIf="mostrarMensaje " class="mensajeconfirmacion" style="justify-content: center;">
+          <p>{{mostrarMensaje}}</p>
+        </div>
+
+        <a style="padding-top: 10px;" class="col-6">
+          <button (click)="goToInvoiceDetail(producto)" type="button" class="btn btn-success">EDITAR</button>
+        </a>
+        <a  style="padding-top: 10px;" class="col-6">
+          <button (click)="eliminar()" type="submit" class="btn btn-success">ELIMINAR</button>
+        </a>
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

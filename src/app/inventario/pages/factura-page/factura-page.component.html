@@ -1,0 +1,32 @@
+<div class="conteiner-fluid formFact">
+
+  <h1  style="font-family: Sometype Mono; text-align: center;">Factura</h1>
+
+  <table *ngIf="producto" class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Categoria</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+        <th>Total</th>
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ producto.id }}</td>
+        <td>{{ producto.name }}</td>
+        <td>{{ producto.description }}</td>
+        <td>{{ producto.category }}</td>
+        <td>{{ producto.stock}}</td>
+        <td>{{ producto.price }}</td>
+        <td>{{ producto.price * producto.stock }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
